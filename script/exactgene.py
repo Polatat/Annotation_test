@@ -1,11 +1,12 @@
 import pandas as pd
 import sys
+from pathlib import Path
 
 # --- Configuration ---
 # The annotated file you created in the previous step
-ANNOTATED_FILE_PATH = 'PGS000337_annotated_002_matching.csv'
+ANNOTATED_FILE_PATH = Path ('result/PGS000337_annotated_002_matching.csv')
 # The new file where the unique gene list will be saved
-OUTPUT_GENE_LIST_FILE = 'unique_gene_list.txt'
+OUTPUT_GENE_LIST_FILE = Path('result/unique_gene_list_test.txt')
 # The name of the column that contains the gene names
 GENE_COLUMN_NAME = 'Gene(s)'
 

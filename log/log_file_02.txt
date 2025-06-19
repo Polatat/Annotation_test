@@ -1,8 +1,0 @@
-Successfully loaded 75028 variants from PGS000337.txt
-Successfully loaded 659184 annotations from ASA-24v1-0_A1.hg19.annotated.txt
-Created 'chr_pos_key' for matching in both files.
-Successfully merged the two files, keeping only matched variants.
-Found and kept 8557 matching annotations for the 75028 variants.
-
-Success! Matched annotations file has been saved to: PGS000337_annotated_002_matching.csv
-The final file contains 8557 variants.

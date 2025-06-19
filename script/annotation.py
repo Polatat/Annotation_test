@@ -4,9 +4,9 @@ import sys
 
 # --- Configuration ---
 # File paths for your input files
-PGS_FILE_PATH = 'PGS000337.txt'
-ANNOTATION_FILE_PATH = 'ASA-24v1-0_A1.hg19.annotated.txt'
-OUTPUT_FILE_PATH = 'PGS000337_annotated_002_matching.csv' # The final, merged file
+PGS_FILE_PATH = '../data/PGS000337.txt'
+ANNOTATION_FILE_PATH = '../data/GASA-24v1-0_A1.hg19.annotated.txt'
+OUTPUT_FILE_PATH = '../result/PGS000337_annotated_002_matching.csv' # The final, merged file
 
 def annotate_variants():
     """
