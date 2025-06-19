@@ -1,0 +1,10 @@
+Name	Chr	MapInfo	Alleles	Transcript(s)	Gene(s)	In-exon	Mutation(s)
+rs10458597	1	564621	[T/C]				
+rs9651229	1	567667	[T/C]				
+rs9701872	1	568208	[T/C]				
+rs11497407	1	568527	[A/G]				
+rs9645429	1	569604	[A/G]				
+rs189147642	1	721757	[A/T]				
+rs3131972	1	752721	[A/G]				
+1:754198	1	754198	[A/G]	NR_103536	FAM87B	EXON	Silent
+1:755274	1	755274	[T/C]				
