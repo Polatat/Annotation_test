@@ -4,11 +4,11 @@ from pathlib import Path
 
 # --- Configuration ---
 # The annotated file you created in the previous step
-ANNOTATED_FILE_PATH = Path ('result/PGS000337_annotated_002_matching.csv')
+ANNOTATED_FILE_PATH = Path ('result/annovar_result_test/annoovar_PGS_annotation_test.csv')
 # The new file where the unique gene list will be saved
-OUTPUT_GENE_LIST_FILE = Path('result/unique_gene_list_test.txt')
-# The name of the column that contains the gene names
-GENE_COLUMN_NAME = 'Gene(s)'
+OUTPUT_GENE_LIST_FILE = Path('result/annovar_gene_extraction.txt')
+# A list of possible column names that might contain the gene names.
+POSSIBLE_GENE_COLUMNS = ['Gene.refGene', 'Gene(s)', 'Gene']
 
 
 def extract_unique_genes():
@@ -21,16 +21,23 @@ def extract_unique_genes():
         annotated_df = pd.read_csv(ANNOTATED_FILE_PATH)
         print(f"Successfully loaded {len(annotated_df)} variants from {ANNOTATED_FILE_PATH}")
 
-        # --- 2. Check if the Gene Column Exists ---
-        if GENE_COLUMN_NAME not in annotated_df.columns:
-            print(f"Error: Column '{GENE_COLUMN_NAME}' not found in the file.")
-            print("Please make sure the column name is correct.")
+        # --- 2. Find which gene column exists in the file ---
+        gene_column_name = None
+        for col in POSSIBLE_GENE_COLUMNS:
+            if col in annotated_df.columns:
+                gene_column_name = col
+                break
+
+        if gene_column_name is None:
+            print(f"Error: Could not find a gene column. Searched for {POSSIBLE_GENE_COLUMNS}.")
+            print("Please check the CSV file and update POSSIBLE_GENE_COLUMNS in the script if needed.")
             sys.exit(1)
+        print(f"\nFound gene information in column: '{gene_column_name}'")
 
         # --- 3. Extract Unique Gene Names ---
         # First, drop any rows where the gene name is missing (NaN)
         # Then, get the unique values from the column
-        unique_genes = annotated_df[GENE_COLUMN_NAME].dropna().unique()
+        unique_genes = annotated_df[gene_column_name].dropna().unique()
 
         # Sort the list alphabetically
         unique_genes.sort()
