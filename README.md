@@ -3,9 +3,9 @@
  21/06/2025
 
 This repository is for  gene annotation  from
-file PGS (PGS cataloog) [PGS000337](https://www.google.com/url?sa=j&url=https%3A%2F%2Fwww.pgscatalog.org%2Fscore%2FPGS000337%2F&uct=1747741898&usg=ibLCbAeDlazjwOuSa7hsUA-wVw8.&opi=73833047&source=chat.) regarding to Polygenic riisk score in Coronary artery disease from Koyama S et al. Nat Genet (2020).
+file PGS (PGS cataloog) [PGS000337](https://www.google.com/url?sa=j&url=https%3A%2F%2Fwww.pgscatalog.org%2Fscore%2FPGS000337%2F&uct=1747741898&usg=ibLCbAeDlazjwOuSa7hsUA-wVw8.&opi=73833047&source=chat.) regarding to Polygenic risk score in Coronary artery disease from Koyama S et al. Nat Genet (2020).
 
-Annotated with Infinium Asian Screening Array file:
+Annotation with Infinium Asian Screening Array file:
 [ASIAN annotation file](https://support.illumina.com/downloads/infinium-asian-screening-array-v1-0-support-files.html)
 
 ## Installation
