@@ -3,10 +3,10 @@
  21/06/2025
 
 This repository is for  gene annotation  from
-file PGS (PGS cataloog) [title](https://www.google.com/url?sa=j&url=https%3A%2F%2Fwww.pgscatalog.org%2Fscore%2FPGS000337%2F&uct=1747741898&usg=ibLCbAeDlazjwOuSa7hsUA-wVw8.&opi=73833047&source=chat.) regarding to Polygenic riisk score in Coronary artery disease from Koyama S et al. Nat Genet (2020).
+file PGS (PGS cataloog) [PGS000337](https://www.google.com/url?sa=j&url=https%3A%2F%2Fwww.pgscatalog.org%2Fscore%2FPGS000337%2F&uct=1747741898&usg=ibLCbAeDlazjwOuSa7hsUA-wVw8.&opi=73833047&source=chat.) regarding to Polygenic riisk score in Coronary artery disease from Koyama S et al. Nat Genet (2020).
 
 Annotated with Infinium Asian Screening Array file:
-[title](https://support.illumina.com/downloads/infinium-asian-screening-array-v1-0-support-files.html)
+[ASIAN annotation file](https://support.illumina.com/downloads/infinium-asian-screening-array-v1-0-support-files.html)
 
 ## Installation
 
@@ -112,8 +112,6 @@ A script, exacgene.py, was created to extract a non-redundant list of gene names
 |-protocol refGene,...| Defines the specific annotations to perform. In this case: refGene (gene information), gnomad211_exome (population frequency), and clinvar_20240917 (clinical significance).|
 |-operation g,f,f| Specifies the type of operation for each protocol in the list (g = gene-based, f = filter-based). The order must match the -protocol list.|
 |-nastring .| Sets the string to use for missing values. If an annotation isn't found for a variant, it will be marked with a period (.).|
-
-
 | -csvout|  A helpful flag that consolidates all results into a single, easy-to-use Comma-Separated Values (.csv) file.| 
 
-**More detailed:** [title](https://annovar.openbioinformatics.org/en/latest/)
+**More detailed:** [ANNOVAR Documentation](https://annovar.openbioinformatics.org/en/latest/)
