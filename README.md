@@ -62,7 +62,7 @@ The genetic variants associated with the Polygenic Score (PGS) PGS000337 were su
 
 **1. Custom Annotation against the ASA Reference File**
 
-The PGS variant list was initially annotated against a custom annotation file derived from the Infinium Asian Screening Array (ASA). This procedure was executed using the annotation.py script and resulted in two distinct output files:
+The PGS variant list was initially annotated against a custom annotation file derived from the Infinium Asian Screening Array (ASA). This procedure was executed using the [annotation.py](./script/annotation.py) script and resulted in two distinct output files:
 
 **PGS000337_annotated_001_unmatching.csv:** This file contains the complete list of all original PGS variants. A **left-join** methodology was used to ensure that variants were retained even if they did not have a corresponding entry in the ASA annotation file.
 
@@ -72,9 +72,9 @@ The PGS variant list was initially annotated against a custom annotation file de
 
 An independent and more comprehensive functional annotation was performed using the ANNOVAR software (v. 2025-03-02 22:37:01 -0500 (Sun,  2 Mar 2025, written in Perl). This workflow did not involve the custom ASA file.
 
-Input File Preparation: The initial PGS variant list was converted into the required 5-column ANNOVAR format (.avinput) using the annovar_file_prepare.py script.
+Input File Preparation: The initial PGS variant list was converted into the required 5-column ANNOVAR format (.avinput) using the [annovar_file_prepare.py](./script/annovar_file_prepare.py) script.
 
-Annotation Command: The prepared input file, PGS00337.avinput, was processed with the table_annovar.pl command. Annotation was performed against standard bioinformatics databases, including RefSeq for gene information, gnomAD for population frequencies, and ClinVar for clinical significance.
+Annotation Command: The prepared input file, PGS00337.avinput, was processed with the table_annovar.pl _[in_the script_]()_ command. Annotation was performed against standard bioinformatics databases, including RefSeq for gene information, gnomAD for population frequencies, and ClinVar for clinical significance.
 Output: This pipeline generated the richly annotated file annoovar_PGS_annotation_test.csv, where each variant is described by multiple functional metrics.
 
 
